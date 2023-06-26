@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -15,6 +16,13 @@ public class UIManager : MonoBehaviour
 
     public GameObject roundOverScreen;
 
+    private Board theboard;
+
+    private void Awake()
+    {
+        theboard = FindObjectOfType<Board>();
+    }
+
     void Start()
     {
         winStars1.SetActive(false);
@@ -24,6 +32,29 @@ public class UIManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void PauseUnPause()
+    {
+
+    }
+    public void ShuffelBoard()
+    {
+
+    }
+    public void QuitGame()
+    {
+
+    }
+
+    public void GoTOLevelSelect()
+    {
+
+    }
+
+    public void TryAgain()
+    {
+
     }
 
 }
