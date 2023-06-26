@@ -18,6 +18,10 @@ public class UIManager : MonoBehaviour
 
     private Board theboard;
 
+    public string LevelSelect;
+
+    public GameObject pauseScreen;
+
     private void Awake()
     {
         theboard = FindObjectOfType<Board>();
@@ -36,25 +40,30 @@ public class UIManager : MonoBehaviour
 
     public void PauseUnPause()
     {
+        if (!pauseScreen.activeInHierarchy)
+        {
+            pauseScreen.SetActive(true);
 
+            Time.timeScale = 0f;
+        }
     }
     public void ShuffelBoard()
     {
-
+        theboard.ShuffleBoard();
     }
     public void QuitGame()
     {
-
+        Application.Quit(0);
     }
 
     public void GoTOLevelSelect()
     {
-
+        SceneManager.LoadScene(LevelSelect);
     }
 
     public void TryAgain()
     {
-
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
 }
