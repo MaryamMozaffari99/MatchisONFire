@@ -48,9 +48,9 @@ public class Gem : MonoBehaviour
             board.allGems[posIndex.x, posIndex.y] = this;
         }
 
-
+/*
         transform.position = Vector2.Lerp(transform.position, posIndex, board.gemSpeed * Time.deltaTime);
-
+*/
 
         if(mousePressed && Input.GetMouseButtonUp(0))
         {

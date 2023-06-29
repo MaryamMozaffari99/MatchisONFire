@@ -35,9 +35,12 @@ public class UIManager : MonoBehaviour
     }
     void Update()
     {
-        
-    }
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseUnPause();
+        }
 
+    }
     public void PauseUnPause()
     {
         if (!pauseScreen.activeInHierarchy)
@@ -58,11 +61,12 @@ public class UIManager : MonoBehaviour
     }
     public void QuitGame()
     {
-        Application.Quit(0);
+        Application.Quit();
     }
 
     public void GoTOLevelSelect()
     {
+        Time.timeScale = 1f;
         SceneManager.LoadScene(LevelSelect);
     }
 

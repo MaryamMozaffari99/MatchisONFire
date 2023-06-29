@@ -42,9 +42,9 @@ public class SFXManager : MonoBehaviour
 
     public void PlayRoundOver()
     {
-        roundOverSound.Stop();
+        //roundOverSound.Stop();
 
-        roundOverSound.pitch = Random.Range(0.8f, 1.2f);
+        //roundOverSound.pitch = Random.Range(0.8f, 1.2f);
 
         roundOverSound.Play();
     }

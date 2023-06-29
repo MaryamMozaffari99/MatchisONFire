@@ -669,7 +669,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8d31f4502fef41469b3a9c4d958cbd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roundTime: 60
+  roundTime: 5
   currentScore: 0
   displayScore: 0
   scoreSpeed: 5
